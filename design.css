@@ -1,0 +1,105 @@
+    .pl1 {
+        border-right: solid 5px white;
+        white-space: nowrap;
+        overflow: hidden;    
+        font-family: 'Times New Roman';  
+        font-size: 28px;
+        color: white;
+        animation: animated-text 4s steps(29) 1s 1 normal both,
+        animated-cursor 200ms steps(29) infinite;
+    }
+    @keyframes animated-text{
+        from{width: 0;}
+        to{width: 140px;}
+    }
+    @keyframes animated-cursor{
+        from{border-right-color: white;}
+        to{border-right-color: transparent;}
+    }
+    .fa-instagram {
+        color: black;
+        font-size: 1cm;
+    }
+    .fa-facebook {
+        color: black;
+        font-size: 1cm;
+    }
+    .fa-github {
+        color: black;
+        font-size: 1cm;
+    }
+    .fa-linkedin {
+        color: black;
+        font-size: 1cm;
+    }
+    #nav{
+        color: white;
+        font-family: 'Courier New';
+        font-size: 1.5cm;
+        background-color: black;
+        width: auto;
+        font-variant: small-caps;
+        border-bottom-left-radius: 10%;
+        border-bottom-right-radius: 10%;
+        border-bottom: solid white;
+    }
+    .footer{
+        width: 100%;
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        font-family: 'Courier New';
+        font-weight: bolder;
+        padding: 20px;
+        border-top-left-radius: 10%;
+        border-top-right-radius: 10%;
+        border-top: solid white
+    }
+    #slides {
+        display: flex; 
+        overflow-x: auto;
+    }
+    #slides::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+    #slides::-webkit-scrollbar-thumb {
+        background: greenyellow;
+        border-radius: 5px;
+    }
+    #slides > div {
+        display: flex;
+        flex-direction: row;
+        height: 300px;
+        width: 10cm;
+        padding: 4cm;
+        margin-inline-end: 1cm;
+        border-radius: 10px;
+        background:black;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+    }
+
+    #decor{
+        font-size: 18px;
+        width: auto;
+        font-family: Courier New;
+        font-weight: bolder;
+        transition-duration: 1s;
+        color: #232f3E;
+    }
+    #decor:hover{
+        transition-duration: 1s;
+    }
+    .checked, .fa-star-half-full{
+        color:orange;
+    }
+    body::-webkit-scrollbar{
+        width: 3px;
+    }
+    body::-webkit-scrollbar-thumb{
+        background: #FFCC66;
+    }
+
+
