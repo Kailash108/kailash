@@ -56,7 +56,7 @@
         border-top: solid white
     }
     #slides {
-        display: flex; 
+        display: flex;
         overflow-x: auto;
     }
     #slides::-webkit-scrollbar {
@@ -64,21 +64,20 @@
         height: 5px;
     }
     #slides::-webkit-scrollbar-thumb {
-        background: greenyellow;
+        background: black;
         border-radius: 5px;
     }
     #slides > div {
         display: flex;
         flex-direction: row;
         height: 300px;
-        width: 10cm;
         padding: 4cm;
         margin-inline-end: 1cm;
         border-radius: 10px;
         background:black;
         justify-content: center;
         align-items: center;
-        font-size: 30px;
+        font-size: 25px;
     }
 
     #decor{
@@ -100,6 +99,10 @@
     }
     body::-webkit-scrollbar-thumb{
         background: #FFCC66;
+    }
+    .tech{
+        font-size: 15px;
+        padding-top: 10px;
     }
 
 

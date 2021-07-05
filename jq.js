@@ -92,6 +92,8 @@ $(document).ready(function(){
       $('.6').css("color", "black");
       $('#slide-7').css("background-color", "orange");
       $('.7').css("color", "black");
+      $('#slide-8').css("background-color", "greenyellow");
+      $('.8').css("color", "black");
       $('.dark5').css('color', 'white');
       $('.fa-js-square').css('color', 'yellow');
       $('.fa-html5').css('color', 'orange');
@@ -172,6 +174,8 @@ $(document).ready(function(){
       $('.6').css("color", "white");
       $('#slide-7').css("background-color", "black");
       $('.7').css("color", "white");
+      $('#slide-8').css("background-color", "black");
+      $('.8').css("color", "white");
       $('.dark5').css('color', 'black');
       $('.fa-js-square').css('color', 'black');
       $('.fa-html5').css('color', 'black');
