@@ -120,8 +120,10 @@ $(document).ready(function(){
       $('.netlify').css('color', '4D9ABF')
     })
   
-  
+    $('body').css('transition', '2s');
+    $('#nav').css('transition', '2s')
     $('#btn1').css('visibility', 'hidden');
+    
     
     $('#btn1').click(function(){
       //Night Mode Colors
