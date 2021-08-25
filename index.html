@@ -3,76 +3,95 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">        
     <meta name="google-site-verification" content="F7f5W8tNeB2vU2AQiH4Hfty_dn9I9WCjBe3d2X70vKs" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <script type="text/javascript" src="jQuery.js"></script>
+    
+    <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="jq.js"></script>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
-    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css">
     <link rel="icon" href="icon.jpg" sizes="12x12">
     <link rel="stylesheet" href="design.css">
-    <script src="design.css"></script>
-    <script src="jq.js"></script>
+    
     <title>Welcome To My Personal Website</title>
   </head>
-  <body style="background-color: #ffffff;" onload="greet()">  
+  <body onload="greet()">  
   <!--0️⃣ 1️⃣ 2️⃣ 3️⃣ 4️⃣ 5️⃣ 6️⃣ 7️⃣ 8️⃣ 9️⃣ 🔟-->
       <div id="nav">
             <center>
-              <h6 id="greet" style="font-size: 0.5cm;padding-top: 10px;"></h6>
-              Welcome<span style="font-size: 15px;">[🙏స్వాగతం🙏]</span> <br>
-              <button id="btn" style="color: white;background-color: black;border: solid gold 1px;border-radius: 5px;padding:10px;font-size:15px">🌒Night Mode🌒</button>
-              <button id="btn1" style="color: white;background-color: #2E2C41;border: solid gold 1px;border-radius: 5px;box-shadow: white 20px;padding:10px;font-size:15px">☀️Day Mode☀️</button>
-              <center><p style="font-size: 15px;">Version: 2️⃣.5️⃣.2️⃣</p></center>
-            </center>            
+              <h6 id="greet" class="navH6"></h6>
+              Welcome<span class="navSpan">[🙏స్వాగతం🙏]</span> <br>
+              <button id="btn">🌒Night Mode🌒</button>
+              <button id="btn1">☀️Day Mode☀️</button>
+              <center><p class="navP">Version: 2️⃣.5️⃣.0️⃣</p></center>
+            </center>
       </div>
-      
+
+      <div class="scrollmenu">
+        <a href="#welcome">Welcome</a>
+        <a href="#myself">About Myself</a>
+        <a href="#skills">Technical Skills</a>
+        <a href="#profiles">Coding Profiles</a>
+        <a href="#hosting">Hosting Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact Form</a>
+        <a href="#bots">Telegram Bots</a>
+      </div>
+
+      <a target="blank" id="resume" href="https://drive.google.com/file/d/1wkytjLbW_etp_inGSkpZS1qSuN6_yfvH/view?usp=sharing">Get My Resume</a>
+      <a target="blank" id="blogs" href="https://blog.learncodeonline.in/how-to-host-expressjs-application-on-heroku">My Blogs</a>
+
       <br>
-        <div class="container" data-aos="fade-down" style="margin-top:2cm">
+        <div id="welcome" class="container div2" data-aos="fade-down">
             <center><br><br><br>
-                <img src="Me.jpg" style="border-radius: 50%;width: 200px;border: solid black;"><br><br>
-                <a class="tag col1" style="font-size: 15px;font-weight: bolder;">కైలాష్ మేడవరపు</a><br>
-                <h1 data-aos="fade-right" class="dark2 col2" style="color: black;font-family: Times New Roman;">Kail<span class="col2one">ash M.</span>M.S<br>
-                  <a class="tag col3" style="font-size: 15px;font-family: 'Courier New';font-weight: bolder;">(Front-End Developer)</a><a style="font-size: 15px;color: white;background-color: black;text-decoration: underline;"></a></h1><br>
+                <img src="Me.jpeg" class="div2Img"><br><br>
+                <a class="tag col1 div2a">కైలాష్ మేడవరపు</a><br>
+                <h1 data-aos="fade-right" class="dark2 col2">Kail<span class="col2one">ash M.</span>M.S<br>
+                <a class="tag col3 div22a">(Front-End Developer)</a></a></h1><br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a data-toggle="tooltip" data-aos="fade-down" data-aos-duration="500" href="https://www.instagram.com/kailash_mms/" class="fab fa-instagram" title="Instagram"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a data-toggle="tooltip" data-aos="fade-down" data-aos-duration="1000" href="https://www.facebook.com/srikar.kailash.7" class="fab fa-facebook" title="Facebook" style="color: black;"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a data-toggle="tooltip" data-aos="fade-down" data-aos-duration="2000" href="https://github.com/Kailash108" class="fab fa-github" title="GitHub" style="color: black;"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a data-toggle="tooltip" data-aos="fade-down" data-aos-duration="1000" href="https://www.facebook.com/srikar.kailash.7" class="fab fa-facebook" title="Facebook"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a data-toggle="tooltip" data-aos="fade-down" data-aos-duration="2000" href="https://github.com/Kailash108" class="fab fa-github" title="GitHub"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a data-toggle="tooltip" data-aos="fade-down" data-aos-duration="3000" href="https://www.linkedin.com/in/srikar-kailash-51b560107/" class="fab fa-linkedin" title="LinkedIn"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </center>
         </div>
     <br><br>
+
     <center>
-      <div class="container">
-        <center data-aos="zoom-in" style="margin-top: 6cm;text-align: left;">
-            <h3 style="color: black;text-decoration: underline;font-variant: small-caps;font-family: Times New Roman;"><center class="dark3">About Myself</center></h3><br>
+      <div id='myself' class="container">
+        <center data-aos="zoom-in" class="div3">
+            <h3 class="div3h3"><center class="dark3">About Myself</center></h3><br>
             <div class="item1" data-aos="slide-up" id="decor" class="container">I am Kailash, a native of Andhra Pradesh, currently studying 
-            <span class="decor" style="color: dodgerblue;text-decoration: underline;font-family: Times New Roman;"> Computer Science</span>(💻) Engineering in 
-            <a target="_blank" href="http://www.amrita.edu" style="text-decoration: underline;font-family: Times New Roman;color: red;">"Amrita Vishwa Vidyapeetam, Coimbatore".</a> <a id="decor">and I have Interned at <span class="intComp" style="text-decoration: underline;color: indigo;" onclick="location.href='http://hashhackcode.com'">"HashHackCode"</span>, a Chennai based company, for a month(May2019 to June2019) as a CodeMentor.</a>
+            <span class="decor div3span"> Computer Science</span>(💻) Engineering in 
+            <a target="_blank" href="http://www.amrita.edu" class="div3a">"Amrita Vishwa Vidyapeetam, Coimbatore".</a> <a id="decor">and I have Interned at <span class="intComp div3ic" onclick="location.href='http://hashhackcode.com'">"HashHackCode"</span>, a Chennai based company, for a month(May2019 to June2019) as a CodeMentor.</a>
             I am passionate about learning new Software Technologies.<br><br>I have developed a website for a foundation which was started by my friend, Nikhil, and his team
             from Veltech University, Chennai. I have also built an Android App(📲), named Shivoham, which is deployed on Google Play Store. The app contains the information related to Lord Shiva(🔱), Temples(🛕) which are dedicated to him, reaching those temples(a small tourist guide🗺️) and lot more. Scroll down(🖱️) to the next section to get more information about my contributions. I also have some knowledge on MongoDB, NodeJS and ExpressJS.<br><br>
-            If you want to communicate with me, <a style="text-decoration:underline;" href="mailto:srikarkailash9@gmail.com?subject=From Your Website&body=Hello Kailash, ">"Click Here"</a> to send me a mail(📧).
+            If you want to communicate with me, <a id="mail" href="mailto:srikarkailash9@gmail.com?subject=From Your Website&body=Hello Kailash, ">"Click Here"</a> to send me a mail(📧).
             </div>
         </center>
       </div>
     </center>
     <br><br>
 
-    <div class="container tag">
-      <center style="margin-top: 10cm;"> 
-        <h2 class="dark3" data-aos="fade-down" style="font-family: 'Times New Roman';text-decoration: underline;font-variant: small-caps">Have Experience On:</h2>
+    <div id="skills" class="container tag">
+      <center class="div4"> 
+        <h2 class="dark3 div4h2" data-aos="fade-down">Tech. Skills:</h2>
           <br>
           <div class="container">
             <div class="table-responsive">      
-            <table data-aos="zoom-in" class="table table-striped table-bordered zoom-in" style="text-align: center;">
+            <table data-aos="zoom-in" class="table table-striped table-bordered zoom-in div4table">
                 <tr>
-                    <th style="text-align: center;text-decoration: underline;">Technical Language</th>
-                    <th style="text-align: center;text-decoration: underline;">Rating</th>
-                    <th style="text-align: center;text-decoration: underline;">Certification</th>
+                    <th class="div4th">Technical Language</th>
+                    <th class="div4th">Rating</th>
+                    <th class="div4th">Certification</th>
                 </tr>
                 <tr>
                     <td>C/C++<br>[Verified By HackerRank]</td>
@@ -84,7 +103,7 @@
                         <span class="fa fa-star nc"></span>
                     </td>
                     <td>
-                      <center><a style="font-weight:bolder">-</a></center>
+                      <center><a class="tdcenter">-</a></center>
                     </td>
                 </tr>
                 <tr>
@@ -97,7 +116,7 @@
                         <span class="fa fa-star nc"></span>
                     </td>
                     <td>
-                      <center><a href="https://www.hackerrank.com/certificates/3a3761fbc349" style="font-weight:bolder">Click Here</a></center>
+                      <center><a href="https://www.hackerrank.com/certificates/3a3761fbc349" class="tdcenter">Click Here</a></center>
                     </td>
                 </tr>
                 <tr>
@@ -110,7 +129,7 @@
                         <span class="fa fa-star nc"></span>
                     </td>
                     <td>
-                      <center><a href="https://www.hackerrank.com/certificates/6a10ecf34024" style="font-weight:bolder">Click Here</a></center>
+                      <center><a href="https://www.hackerrank.com/certificates/6a10ecf34024" class="tdcenter">Click Here</a></center>
                     </td>
                 </tr>
                  <tr>
@@ -123,7 +142,7 @@
                         <span class="fa fa-star nc"></span>
                     </td>
                     <td>
-                      <center><a style="font-weight:bolder">-</a></center>
+                      <center><a class="tdcenter">-</a></center>
                     </td>
                 </tr>
                 
@@ -138,28 +157,28 @@
         <center>
         <div class="row">      
           <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-            <h5 class="dark3" data-aos="fade-up" style="font-family: 'Times New Roman';text-decoration: underline;font-variant: small-caps;">Experience on Frameworks:</h5>
-              <ul class="item1" data-aos="zoom-in" style="list-style-type: none;">
-                <li class="item1" style="list-style-type: none;font-family: 'Courier New';font-weight: bolder;color: black;">Bootstrap  
+            <h5 class="dark3 div5h5" data-aos="fade-up">Frameworks</h5>
+              <ul class="item1 listType" data-aos="zoom-in">
+                <li class="item1 div5li">Bootstrap  
                 <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
                   <!-- <button style="cursor: auto;background-color: greenyellow;color: black;" type="button" class="btn btn-primary badge">4/5</button> </li>  -->
-                <li class="item1" style="list-style-type: none;font-family: 'Courier New';font-weight: bolder;color: black;">ReactJS  
+                <li class="item1 div5li">ReactJS  
                 <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
                   <!-- <button style="cursor: auto;background-color: greenyellow;color: black;" type="button" class="btn btn-primary badge">3/5</button> --> </li>
-                <li class="item1" style="list-style-type: none;font-family: 'Courier New';font-weight: bolder;color: black;">React Native  
+                <li class="item1 div5li">React Native  
                   &nbsp;
                   <!-- <button style="cursor: auto;background-color: greenyellow;color: black;" type="button" class="btn btn-primary badge">3/5</button> --> </li>
               </ul>
           </div>
           <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-            <h5 class="dark3" data-aos="fade-down" style="font-family: 'Times New Roman';text-decoration: underline;font-variant: small-caps">Tech Stack:</h5>
-              <ul class="item1" data-aos="fade-up" style="list-style-type: none;font-family: 'Courier New';font-weight: bolder;padding-top: 10px;color: black;">
+            <h5 class="dark3 div5hh5" data-aos="fade-down">Tech Stack</h5>
+              <ul class="item1 div5ul" data-aos="fade-up">
                 <li>MongoDB, ExpressJS, ReactJS, NodeJS - [MERN]</li>
               </ul>
           </div>
           <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-            <h5 class="dark3" data-aos="fade-down" style="font-family: 'Times New Roman';text-decoration: underline;font-variant: small-caps">Operating Systems:</h5>
-              <ul class="item1" data-aos="fade-up" style="list-style-type: none;font-family: 'Courier New';font-weight: bolder;padding-top: 10px;color: black;">
+            <h5 class="dark3 div5h5" data-aos="fade-down">OSes</h5>
+              <ul class="item1 div5ul" data-aos="fade-up">
                 <li>💻: Windows, Ubuntu</li>
                 <li>📲: Android</li>
               </ul>
@@ -169,27 +188,27 @@
       </div>      
     
 
-    <div class="container tag">
-      <center style="margin-top: 10cm;"> 
-        <h2 class="dark3" data-aos="fade-down" style="font-family: 'Times New Roman';text-decoration: underline;font-variant: small-caps">My Online Coding Sites</h2>
-        <p data-aos="fade-up" style="font-family: 'Courier New';font-weight: bolder;padding-top: 20px;text-align: center;">I do practice programming(👨‍💻) on 3 different websites.<br><br>
+    <div id="profiles" class="container tag">
+      <center class="div6"> 
+        <h2 class="dark3 div6h2" data-aos="fade-down">Coding Profiles</h2>
+        <p data-aos="fade-up" class="div6p">I do practice programming(👨‍💻) on 3 different websites.<br><br>
           <span id="col3">1. Code<span id="col3one">Chef</span></span><br>
           <span id="col1">2. HackerRank</span><br>
           <span id="col2">3. HackerEarth</span><br><br><br>
           View My Profiles Here...
         </p>
-        <iconify-icon data-aos="fade-up" title="CodeChef" onclick="location.href='https://www.codechef.com/users/kailash108'" style="height: 1.5cm;width: 1cm;cursor: pointer;margin-left: 20px;" data-icon="simple-icons:codechef"></iconify-icon>
-        <iconify-icon data-aos="fade-left" title="HackerRank" onclick="location.href='https://www.hackerrank.com/srikarkailash9'" style="height: 1.5cm;width: 1cm;cursor: pointer;margin-left: 20px;" data-icon="simple-icons:hackerrank"></iconify-icon>
-        <iconify-icon data-aos="fade-down" title="HackerEarth" onclick="location.href='https://www.hackerearth.com/@srikarkailash9'" style="height: 1.5cm;width: 1cm;cursor: pointer;margin-left: 20px;" data-icon="simple-icons:hackerearth"></iconify-icon>
+        <iconify-icon data-aos="fade-up" title="CodeChef" onclick="location.href='https://www.codechef.com/users/kailash108'" id="icon" data-icon="simple-icons:codechef"></iconify-icon>
+        <iconify-icon data-aos="fade-left" title="HackerRank" onclick="location.href='https://www.hackerrank.com/srikarkailash9'" id="icon" data-icon="simple-icons:hackerrank"></iconify-icon>
+        <iconify-icon data-aos="fade-down" title="HackerEarth" onclick="location.href='https://www.hackerearth.com/@srikarkailash9'" id="icon" data-icon="simple-icons:hackerearth"></iconify-icon>
       </center>
     </div>
 
-    <div class="container tag">
-      <center style="margin-top: 10cm;"> 
-        <h2 class="dark3" data-aos="fade-down" style="font-family: 'Times New Roman';text-decoration: underline;font-variant: small-caps">Hosting Services</h2>
-        <p data-aos="fade-up" style="font-family: 'Courier New';font-weight: bolder;padding-top: 20px;text-align: center;">Below are the hosting services I do use for web hosting<br><br>
-          <span title="Heroku" onclick="location.href='https://www.heroku.com/'" class="iconify heroku" data-icon="simple-icons:heroku" data-inline="false" style="color: black;height: 1.5cm;width: 1cm;cursor: pointer;margin-left: 20px;"></span>
-          <span title="Netlify" onclick="location.href='https://www.netlify.com/'" class="iconify netlify" data-icon="simple-icons:netlify" data-inline="false" style="color: black;height: 1.5cm;width: 1cm;cursor: pointer;margin-left: 20px;"></span><br><br>
+    <div id="hosting" class="container tag">
+      <center class="div11"> 
+        <h2 class="dark3 div5h5" data-aos="fade-down">Hosting Services</h2>
+        <p data-aos="fade-up" class="div7p">Below are the hosting services I do use for web hosting<br><br>
+          <span title="Heroku" onclick="location.href='https://www.heroku.com/'" class="iconify heroku" data-icon="simple-icons:heroku" data-inline="false"></span>
+          <span title="Netlify" onclick="location.href='https://www.netlify.com/'" class="iconify netlify" data-icon="simple-icons:netlify" data-inline="false"></span><br><br>
           <span id="col3">1. Heroku</span><br>
           <span id="col1">2. Netlify</span><br>
           <span id="col2">3. Github Pages</span><br><br>
@@ -197,34 +216,34 @@
       </center>
     </div>
 
-    <div class="container">
-    <center style="margin-top:10cm">
-        <h4 class="item dark3" data-aos="zoom-in" style="font-family: Times New Roman;text-decoration: underline;font-size: 30px;font-variant: small-caps;padding-bottom: 20px;">My Works/Contributions:</h4>
+    <div id="projects" class="container">
+    <center class="div11">
+        <h4 class="item dark3 div5h5" data-aos="zoom-in">Projects:</h4>
         <div data-aos="fade-up" data-aos-duration="3000" class="slider">    
         <div class="container-fluid" id="slides">
           <div id="slide-1"><br><br>
-            <a class="1" style="font-family: Times New Roman;color: white;" target="_blank" href="https://play.google.com/store/apps/details?id=com.msk.ABLS">Shivoham<br><p class="tech">- An Android App</p></a>                
+            <a class="1 one" target="_blank" href="https://play.google.com/store/apps/details?id=com.msk.ABLS">Shivoham<br><p class="tech">- An Android App</p></a>                
           </div>
           <div id="slide-2"><br><br>
-            <a class="2" style="font-family: Times New Roman;color: white;" target="_blank" href="https://favcollection.netlify.app">Favorite Collection<p class="tech">- ReactJS , Contentful</p></a>                
+            <a class="2 two" target="_blank" href="https://favcollection.netlify.app">Favorite Collection<p class="tech">- ReactJS , Contentful</p></a>                
           </div>
           <div id="slide-3"><br><br>
-            <a class="3" style="font-family: Times New Roman;color: white;" target="_blank" href="https://imponote.herokuapp.com">ImpoNote<p class="tech">- NodeJS, ExpressJS, MongoDB</p></a>                
+            <a class="3 three" target="_blank" href="https://imponote.herokuapp.com">ImpoNote<p class="tech">- NodeJS, ExpressJS, MongoDB</p></a>                
           </div>
           <div id="slide-4"><br><br>
-            <a class="4" style="font-family: Times New Roman;color: white;" target="_blank" href="https://spaceinfuse.netlify.app">Space Infuse<p class="tech">- HTML, CSS, Bootstrap</p> <!--For A Startup--></a>                
+            <a class="4 four" target="_blank" href="https://spaceinfuse.netlify.app">Space Infuse<p class="tech">- HTML, CSS, Bootstrap</p> <!--For A Startup--></a>                
           </div>
           <div id="slide-5"><br><br>
-            <a class="5" style="font-family: Times New Roman;color: white;" target="_blank" href="http://happymotivato.netlify.app">Happy Motivato <p class="tech">- HTML, CSS, Bootstrap</p></a>                
+            <a class="5 five" target="_blank" href="http://happymotivato.netlify.app">Happy Motivato <p class="tech">- HTML, CSS, Bootstrap</p></a>                
           </div>
           <div id="slide-6"><br><br>
-            <a class="6" style="font-family: Times New Roman;color: white;" target="_blank" href="http://kailash108.github.io/echeck">COVID-19 e-Checker <p class="tech">- HTML, JavaScript</p></a>                
+            <a class="6 six" target="_blank" href="http://kailash108.github.io/echeck">COVID-19 e-Checker <p class="tech">- HTML, JavaScript</p></a>                
           </div>
           <div id="slide-7"><br><br>
-            <a class="7" style="font-family: Times New Roman;color: white;" target="_blank" href="http://kailash108.github.io/resumebuilder">A Basic Resume Builder Tool<p class="tech">- HTML, JavaScript</p></a>                
+            <a class="7 seven" target="_blank" href="http://kailash108.github.io/resumebuilder">A Basic Resume Builder Tool<p class="tech">- HTML, JavaScript</p></a>                
           </div>
           <div id="slide-8"><br><br>
-            <a class="8" style="font-family: Times New Roman;color: white;" target="_blank" href="https://github.com/Kailash108">Check My GitHub<br>For More!!</a>                
+            <a class="8 eight" target="_blank" href="https://github.com/Kailash108">Check My GitHub<br>For More!!</a>                
           </div>
         </div>
       </div>
@@ -232,49 +251,43 @@
   </div>
     <br><br>
 
-    <div class="container">
-      <center style="margin-top: 10cm;">
-          <h4 class="item dark3" data-aos="fade-up" data-aos-duration="3000" class="dark5" style="color: black;font-size: 0.8cm;font-variant: small-caps;font-family: Times New Roman;text-decoration: underline;padding-bottom: 20px;">Developed Products Using:</h4>
-          <p data-aos="fade-up" id="py" style='font-size:1.5cm;color: black;' data-toggle="tooltip" data-placement="right" title="Python" class='fab fa-python'></p>&nbsp;&nbsp;&nbsp;<br>
-          <p data-aos="fade-down" style='font-size:1.5cm;color: black;' data-toggle="tooltip" title="HTML" data-placement="bottom" class='fab fa-html5'></p>&nbsp;&nbsp;&nbsp;
-          <p data-aos="fade-down" style='font-size:1.5cm;color: black;' data-toggle="tooltip" data-placement="bottom" title="CSS" class='fab fa-css3'></p>&nbsp;&nbsp;&nbsp;
-          <p data-aos="fade-up" style='font-size:1.5cm;color: black;' data-toggle="tooltip" data-placement="bottom" title="JavaScript" class='fab fa-js-square'></p>&nbsp;&nbsp;&nbsp;<br>
-          <p data-aos="fade-down" style='font-size:1.5cm;color: black;' data-toggle="tooltip" data-placement="bottom" title="React" class='fab fa-react'></p>&nbsp;&nbsp;&nbsp;
+    <div id="products" class="container">
+      <center class="div11">
+          <h4 class="item dark3 div8h5" data-aos="fade-up" data-aos-duration="3000">Developed Products Using:</h4>
+          <p data-aos="fade-up" id="py" data-toggle="tooltip" data-placement="right" title="Python" class='fab fa-python div8p'></p>&nbsp;&nbsp;&nbsp;<br>
+          <p data-aos="fade-down" data-toggle="tooltip" title="HTML" data-placement="bottom" class='fab fa-html5 div8p'></p>&nbsp;&nbsp;&nbsp;
+          <p data-aos="fade-down" data-toggle="tooltip" data-placement="bottom" title="CSS" class='fab fa-css3 div8p'></p>&nbsp;&nbsp;&nbsp;
+          <p data-aos="fade-up"  data-toggle="tooltip" data-placement="bottom" title="JavaScript" class='fab fa-js-square div8p'></p>&nbsp;&nbsp;&nbsp;<br>
+          <p data-aos="fade-down"  data-toggle="tooltip" data-placement="bottom" title="React" class='fab fa-react div8p'></p>&nbsp;&nbsp;&nbsp;
       </center>
     </div>
 
-    <div class="container" style="padding-top:10cm">
+    <div id="contact" class="container" style="padding-top:10cm">
       <center>
-        <h4 class="item dark3" data-aos="fade-down" data-aos-duration="3000" class="dark5" style="color: black;font-size: 0.8cm;font-variant: small-caps;font-family: Times New Roman;text-decoration: underline;padding-bottom: 20px;">Want To Contact ??</h4>
-        <p class="item1 dis3" data-aos="fade-up" style="font-family: 'Courier New';font-weight: bolder;">If you want to send a message(💬) to me, you can use the form here(👇) and send the messages directly to me.</p>
-        <p data-aos="fade-down" class="dis1" style="visibility: hidden;color: black;font-family: 'Courier New';font-weight: bolder;">Note: Contact Form Has Been Made Available only in ☀️Day-Mode☀️.</p>
+        <h4 class="item dark3 div5h5" data-aos="fade-down" data-aos-duration="3000" class="dark5">Want To Contact ??</h4>
+        <p class="item1 dis3 div9p" data-aos="fade-up">If you want to send a message(💬) to me, you can use the form here(👇) and send the messages directly to me.</p>
+        <p data-aos="fade-down" class="dis1 div9pp">Note: Contact Form Has Been Made Available only in ☀️Day-Mode☀️.</p>
         <div data-aos="zoom-in" class="container dis">
-          <iframe class="formcol" src="form.html" style="height: 20cm;width: 100%;border: none;"></iframe>
+          <iframe class="formcol" src="form.html" ></iframe>
         </div>
-        <p class="dis1" style="visibility: hidden;color: black;font-family: 'Courier New';font-weight: bolder;position: relative;top: -8cm">Scroll up(🖱️) and switch to ☀️Day-Mode☀️.</p>      
+        <p class="dis1 div93p">Scroll up(🖱️) and switch to ☀️Day-Mode☀️.</p>      
       </center>
     </div>
 
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <br><br><br><br><br>
-    <center class="item" data-aos="fade-down" style="padding-bottom: 2cm;">
-        <!-- freecounterstat Code STARTS -->
-        <h3 class="dark3 dist4" style="text-decoration: underline;color: black;font-family: Times New Roman;font-variant: small-caps;">No. Of Visitors:</h3>
-        <button disabled onclick="location.href='https://www.freecounterstat.com/geozoom.php?c=7hwku87e2z4ga4rh3d1qcz8pn1yb6czc&base=counter2&type_clic=1'" title="website counter"><img src="https://counter2.stat.ovh/private/freecounterstat.php?c=7hwku87e2z4ga4rh3d1qcz8pn1yb6czc" border="0" title="Not Clickable" alt="Website Counter"></button>
-        <!-- freecounterstat Code ENDS -->
-    </center>
-    <br><br><br><br>
+    <div id="bots" class="container tag">
+      <center class="div11"> 
+        <h2 class="dark3 div5h5" data-aos="fade-down">Telegram Bots</h2>
+        <p data-aos="fade-up" class="div10p">Below are the two Telegram Bot links which are built using TelegrafJS, NodeJS.<br><br>
+          <a id="tb1" href="https://t.me/movieInfoFetchBot">1. Movie Information Fetch Bot</a><br>
+          <a id="tb2" href="https://t.me/movieInfoFetchBot">2. Information Fetch Bot</a>
+        </p>
+      </center>
+    </div>
+
     <footer class="footer">
-        <center>|Kailash M.M.S|<br>Developed Using <a style="color: coral;text-decoration: underline;font-variant: small-caps;" href="https://code.visualstudio.com/">Visual Studio Code</a><br></center>
+        <center>|Kailash M.M.S|<br>Developed Using <a class="footerA" href="https://code.visualstudio.com/">Visual Studio Code</a><br></center>
         <center id="time"></center>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     
     <script>
       AOS.init({

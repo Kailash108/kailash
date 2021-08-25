@@ -19,11 +19,11 @@ function greet(){
   }
   else if(hour >= 18 && hour < 20){
     hour = "Good Evening<br>Stay Tension Free.";
-    window.alert('Please Use Night Mode To Reduce The Eye Strain.');
+    window.alert(`Its ${h}:${m}, Please Use Night Mode To Reduce Your Eye Strain.`);
   }
   else if(hour >= 20 && hour <= 23){
     hour = "Good Night<br>Sweet Dreams, Take Care.";
-    window.alert('Please Use Night Mode To Reduce The Eye Strain.');
+    window.alert(`Its ${h}:${m}, Please Use Night Mode To Reduce Your Eye Strain.`);
   }
   document.getElementById("greet").innerHTML = hour;
   document.getElementById("time").innerHTML = "Last (Re)loaded Time: " + h + ":" + m + ":" + s;
@@ -36,7 +36,8 @@ document.onreadystatechange = function() {
   else { 
     document.getElementById("greet").innerHTML = hour;
     document.getElementById("time").innerHTML = "Last (Re)loaded Time: " + h + ":" + m + ":" + s;
-  } 
+  }
+
 };
 
 $(document).ready(function(){
@@ -118,15 +119,23 @@ $(document).ready(function(){
       $('.table').css('border-bottom', 'solid orange');
       $('.heroku').css('color', '#8763B2')
       $('.netlify').css('color', '4D9ABF')
+      $('#resume').css('color', 'black')
+      $('#resume').css('background-color', 'greenyellow')
+      $('#blogs').css('color', 'black')
+      $('#blogs').css('background-color', 'gold')
     })
   
-    $('body').css('transition', '2s');
-    $('#nav').css('transition', '2s')
+    $('body').css('transition', '1s');
+    $('#nav').css('transition', '1s')
     $('#btn1').css('visibility', 'hidden');
     
     
     $('#btn1').click(function(){
       //Night Mode Colors
+      $('#resume').css('color', 'white')
+      $('#resume').css('background-color', 'black')
+      $('#blogs').css('color', 'white')
+      $('#blogs').css('background-color', 'black')
       $('body').css('background-color', 'white');
       $('#nav').css('background-color', 'black');
       $('.footer').css('background-color', 'black');
