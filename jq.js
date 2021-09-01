@@ -37,7 +37,19 @@ document.onreadystatechange = function() {
     document.getElementById("greet").innerHTML = hour;
     document.getElementById("time").innerHTML = "Last (Re)loaded Time: " + h + ":" + m + ":" + s;
   }
+};
 
+document.onreadystatechange = function() {
+  if (document.readyState !== "complete") {
+      document.querySelector("body").style.visibility = "hidden";
+      document.querySelector("#loader").style.visibility = "visible";
+      document.querySelector('body').style.backgroundColor = "#2E2C41"
+  } 
+  else {
+      document.querySelector("#loader").style.display = "none";
+      document.querySelector("body").style.visibility = "visible";
+      document.querySelector('body').style.backgroundColor = "white"
+  }
 };
 
 $(document).ready(function(){
