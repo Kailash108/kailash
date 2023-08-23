@@ -135,6 +135,12 @@ $(document).ready(function(){
       $('#resume').css('background-color', 'greenyellow')
       $('#blogs').css('color', 'black')
       $('#blogs').css('background-color', 'gold')
+      $('.timeline1').css('background-color', 'gold')
+      $('.timeline1').css('color', 'black')
+      $('.timeline2').css('background-color', 'greenyellow')
+      $('.timeline2').css('color', 'black')
+      $('.timeline3').css('background-color', 'gold')
+      $('.timeline3').css('color', 'black')
     })
   
     $('body').css('transition', '1s');
@@ -220,5 +226,11 @@ $(document).ready(function(){
       $('.table').css('border', 'none');
       $('.heroku').css('color', 'black')
       $('.netlify').css('color', 'black')
+      $('.timeline1').css('background-color', 'black')
+      $('.timeline1').css('color', 'white')
+      $('.timeline2').css('background-color', 'black')
+      $('.timeline2').css('color', 'white')
+      $('.timeline3').css('background-color', 'black')
+      $('.timeline3').css('color', 'white')
     })
   })
