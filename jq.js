@@ -139,8 +139,6 @@ $(document).ready(function(){
       $('.timeline1').css('color', 'black')
       $('.timeline2').css('background-color', 'greenyellow')
       $('.timeline2').css('color', 'black')
-      $('.timeline3').css('background-color', 'gold')
-      $('.timeline3').css('color', 'black')
     })
   
     $('body').css('transition', '1s');
@@ -230,7 +228,5 @@ $(document).ready(function(){
       $('.timeline1').css('color', 'white')
       $('.timeline2').css('background-color', 'black')
       $('.timeline2').css('color', 'white')
-      $('.timeline3').css('background-color', 'black')
-      $('.timeline3').css('color', 'white')
     })
   })
