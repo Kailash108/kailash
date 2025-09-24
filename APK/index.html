@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shivoham App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Shivoham App</h1>
+    </header>
+
+    <section class="hero">
+      <!-- <h2>Shivoham</h2> -->
+      <h2></h2>
+      <p class="section-p">
+        Explore the two apps which provides information of Lord Shiva - <br>
+        <span class="typewriter-text"></span> <span class="cursor">|</span>
+      </p>
+    </section>
+
+    <section id="install-note">
+      <div class="app-section">
+        <h2>Important Installation Note</h2>
+        <p>
+          These apps are not available on Google Play Store. To install, you'll
+          need to enable <strong>"Install from Unknown Sources"</strong> in your
+          Android settings. This is safe when downloading from trusted platforms or people.
+        </p>
+      </div>
+    </section>
+
+    <section id="shivoham">
+      <div class="app-section">
+        <h2>Shivoham</h2>
+        <div class="app-icons">
+          <img src="./Play Store Graphics/shivoham.png" alt="Shivoham App Icon">
+        </div>
+        <h3 style="color:#FFD700; margin-top:20px;text-decoration: underline">App Description</h3>
+        <ul style="text-align: left;list-style: disc; padding-left: 100px; padding-right: 50px; font-size: 16px; line-height: 1.6; color: white;">
+          <li>Explore the sacred <strong>Dwadasa Jyotirlingas</strong> with detailed guides including <em>how to reach</em>, <em>darshan timings</em>, and <em>contact information</em>.</li>
+          <li>Discover <strong>Chardham</strong> and other renowned temples and spiritual destinations dedicated to Lord Shiva.</li>
+          <li>Watch <strong>pre-recorded streams of Jyotirlingas</strong> anytime for a spiritual experience.</li>
+          <li>Access information about famous temples and visiting spots related to Lord Shiva.</li>
+          <li>Start your devotional journey today — <strong>download and install Shivoham</strong>.</li>
+        </ul>
+        <div class="slider" data-slider="1">
+          <div class="slides" style="cursor: pointer">
+            <img
+              src="Play Store Graphics/one.png"
+              class="active"
+              alt="Shivoham Screenshot 1"
+            />
+            <img
+              src="Play Store Graphics/two.png"
+              alt="Shivoham Screenshot 2"
+            />
+            <img
+              src="Play Store Graphics/three.png"
+              alt="Shivoham Screenshot 3"
+            />
+            <img
+              src="Play Store Graphics/four.png"
+              alt="Shivoham Screenshot 4"
+            />
+          </div>
+          <div class="dots" id="dots1"></div>
+        </div>
+        <a href="https://drive.google.com/file/d/1oYOf-2t9dnkj4TzUgl-bIW2XrjjK1tpb/view?usp=sharing" class="download-btn">Download APK</a>
+      </div>
+    </section>
+
+    <section id="lordshiva">
+      <div class="app-section">
+        <h2>Lord Shiva Gallery</h2>
+        <div class="app-icons">
+          <img src="./Play Store Graphics/TLSG/lsg.png" alt="Lord Shiva Gallery App Icon">
+        </div>
+        <h3 style="color:#FFD700; margin-top:20px;text-decoration: underline;">App Description</h3>
+        <ul style="text-align: left;list-style: disc; padding-left: 100px; padding-right: 50px; font-size: 16px; line-height: 1.6; color: white;">
+          <li>Explore a curated collection of pictures and quotes reflecting the divine essence of Lord Shiva.</li>
+          <li>Immerse yourself in captivating images that highlight the different aspects of Lord Shiva.</li>
+          <li>Dive into spiritual wisdom through carefully selected quotes and meaningful insights.</li>
+        </ul>
+        <br>
+        <ul style="text-align: left;list-style: disc; padding-left: 100px; padding-right: 50px; font-size: 16px; line-height: 1.6; color: white;">
+          <h3>Key Features</h3>
+          <li>User-friendly and simple interface.</li>
+          <li>View and download high-quality images.</li>
+          <li>Read, save, and share inspiring quotes.</li>
+        </ul>
+        <br>
+        <ul style="text-align: left;list-style: disc; padding-left: 100px; padding-right: 50px; font-size: 16px; line-height: 1.6; color: white;">
+          <h3>Disclaimer</h3>
+          <li>This app contains devotional media of Lord Shiva collected from various sources. Usage of copyrighted material is strictly for devotional purposes.</li>
+          <li>If you are the rightful owner of any content used and wish to have it removed, please contact me via email.</li>
+        </ul>
+        <div class="slider" data-slider="2">
+          <div class="slides" style="cursor: pointer">
+            <img
+              src="Play Store Graphics/TLSG/one.png"
+              class="active"
+              alt="Lord Shiva Gallery Screenshot 1"
+            />
+            <img
+              src="Play Store Graphics/TLSG/two.png"
+              alt="Lord Shiva Gallery Screenshot 2"
+            />
+            <img
+              src="Play Store Graphics/TLSG/three.png"
+              alt="Lord Shiva Gallery Screenshot 3"
+            />
+          </div>
+          <div class="dots" id="dots2"></div>
+        </div>
+        <a href="https://drive.google.com/file/d/1p0HYX9nPCW-XbElIHaJIqdBEigeJ-uTQ/view?usp=drive_link" class="download-btn">Download APK</a>
+      </div>
+    </section>
+
+    <div class="lightbox" id="lightbox">
+      <span class="lightbox-close" onclick="closeLightbox()">✖</span>
+      <img id="lightbox-img" src="" alt="Enlarged" />
+    </div>
+
+    <section id="guide" class="parallax-section">
+      <div class="content">
+        <ol class="install-steps">
+          <h2 style="text-align: center">Installation Guide</h2>
+          <li>Download the APK file by clicking the download button above</li>
+          <li>
+            Go to Settings &gt; Security &gt; Enable "Unknown Sources" or
+            "Install from Unknown Sources"
+          </li>
+          <li>Open the downloaded APK file from your Downloads folder</li>
+          <li>Tap "Install" and wait for the installation to complete</li>
+          <li>Open the app and enjoy the divine experience!</li>
+        </ol>
+      </div>
+    </section>
+
+    <footer>
+      Created with devotion for Lord Shiva devotees <br />🙏 Har Har Mahadev 🙏
+    </footer>
+  </body>
+</html>

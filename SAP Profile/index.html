@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="icon.png" sizes="12x12">
+<title>Kailash's SAP Portfolio</title>
+<style>
+/* General Body */
+body {
+  margin: 0;
+  font-family: "Tahoma";
+  background: #e0f0ff;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Menu bar */
+.menubar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background: linear-gradient(180deg, #C8D3E4, #FBFBFB);
+  color: #33519A;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  z-index: 1000;
+  font-size: 12px;
+}
+.menubar > .menu-item {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+/* Toolbar */
+.toolbar {
+  position: fixed;
+  top: 30px;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: linear-gradient(180deg, #EEF1F5, #F9F9F9);
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  gap: 5px;
+  z-index: 1000;
+}
+.toolbar button {
+  width: 32px;
+  height: 32px;
+  background: #ECF0F7;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.toolbar button:hover { background: #cce5ff; }
+
+/* Header */
+.header {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  right: 0;
+  height: 35px;
+  background: linear-gradient(180deg, #CBDCEA, #A8C0D5);
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 18px;
+  z-index: 1000;
+}
+#tcodeBar { display: flex; align-items: center; gap: 10px; }
+#tcodeInput { padding: 3px 6px; font-size: 0.85rem; border-radius: 3px; border: 1px solid black; }
+#currentTCode { background: #81B730; color: #fff; padding: 2px 6px; border: 1px solid black; border-radius: 1cm; font-size: 0.30cm; }
+
+.container {
+  display: flex;
+  margin-top: 105px;
+  flex: 1;
+  height: calc(100vh - 129px);  
+}
+
+.sidebar {
+  width: 250px;
+  background: #F0F3F7;
+  border-right: 5px solid #D5DFE6;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+.leaf {
+  padding-left: 20px;
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: 5px;
+  color: black;
+  font-weight: 500;
+}
+.leaf:hover { background: #DCB76E; }
+.leaf:before { content: "▪️ 📁 "; }
+
+.main {
+  flex: 1;
+  padding: 20px;
+  background: #E5ECF1;
+  color: black;
+  font-size: 14px;
+}
+
+.status-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 24px;
+  background: #F9F9F9;
+  color: #33519A;
+  border: #E7EEF3 solid 5px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  font-size: 0.85rem;
+  z-index: 1000;
+}
+
+/* Dropdowns */
+.dropdown {
+  display: none;
+  position: absolute;
+  background: #EEF1F5;
+  border: 1px solid #ccc;
+  min-width: 150px;
+  z-index: 9999;
+  font-size: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+.dropdown div {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.dropdown div:hover { background-color: #DCB76E; }
+
+@media (max-width: 768px) {
+  .container { flex-direction: column; }
+  .sidebar { width: 100%; border-right: none; border-bottom: 1px solid #3399ff; }
+  .dropdown { position: fixed; }
+}
+</style>
+</head>
+<body>
+
+<!-- Menu bar -->
+<div class="menubar">
+  <div class="menu-item" data-menu="menu">Menu</div>
+  <div class="menu-item" data-menu="edit">Edit</div>
+  <div class="menu-item" data-menu="extras">Extras</div>
+  <div class="menu-item" data-menu="system">System</div>
+</div>
+
+<!-- Dropdowns -->
+<div class="dropdown" id="menu-dropdown">
+  <div id="downloadResume">Get My SAP Resume</div>
+</div>
+<div class="dropdown" id="edit-dropdown">
+  <div id="increaseFont">Increase Font</div>
+  <div id="decreaseFont">Decrease Font</div>
+  <div id="resetLayout">Reset Font</div>
+</div>
+<div class="dropdown" id="extras-dropdown">
+  <div id="contactMe">Change Layout</div>
+</div>
+<div class="dropdown" id="system-dropdown">
+  <div id="versionInfo"></div>
+</div>
+
+<!-- Toolbar -->
+<div class="toolbar">
+  <div id="tcodeBar">
+    <span id="currentTCode">✓</span>
+    <input type="text" id="tcodeInput">
+    <button id="executeTcode" title="Execute">▶️</button> <!-- NEW -->
+  </div>
+  <button title="Back">⬅️</button>
+  <button title="Print">🖨️</button>
+</div>
+
+<!-- Header -->
+<div class="header">
+  <span>SAP Easy Access - Kailash Portfolio</span>
+</div>
+
+<!-- Container -->
+<div class="container">
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="leaf" data-key="profile" data-tcode="Z001">Profile</div>
+    <div class="leaf" data-key="skills" data-tcode="Z002">Skills</div>
+    <div class="leaf" data-key="projects" data-tcode="Z003">Projects</div>
+    <div class="leaf" data-key="certifications" data-tcode="Z004">Certifications</div>
+  </div>
+
+  <!-- Main -->
+  <div class="main" id="mainContent">
+    <h2>Welcome to My SAP Portfolio</h2>
+    <p>Click on items in the sidebar or use t-codes to navigate to the content.</p>
+    <p style="text-decoration: underline;">List of T-Codes</p>
+    <p>Z001 - Profile</p>
+    <p>Z002 - Skills</p>
+    <p>Z003 - Projects</p>
+    <p>Z004 - Certifications</p>
+</div>
+
+<!-- Status bar -->
+<div class="status-bar" id="statusBar">Ready</div>
+
+<script>
+/****************************
+ * Dropdown Menu Handling
+ ****************************/
+document.querySelectorAll('.menu-item').forEach(item => {
+  item.addEventListener('click', e => {
+    e.stopPropagation();
+    const menuName = item.dataset.menu;
+    const dropdown = document.getElementById(menuName + '-dropdown');
+    document.querySelectorAll('.dropdown').forEach(dd => dd.style.display = 'none');
+    if(dropdown){
+      const rect = item.getBoundingClientRect();
+      dropdown.style.top = rect.bottom + 'px';
+      dropdown.style.left = rect.left + 'px';
+      dropdown.style.display = 'block';
+    }
+  });
+});
+document.addEventListener('click', () => {
+  document.querySelectorAll('.dropdown').forEach(dd => dd.style.display = 'none');
+});
+
+/****************************
+ * Sections
+ ****************************/
+// <img src="../Me.jpg" alt="DP" style="height: 4cm;border-radius: 10cm;">
+const sections = {
+  profile: `
+    <h2>Profile</h2>
+    <p>▪ Kailash Medavarapu, is a Consultant working at EY with 2+ years of experience.</p>
+    <p>▪ He posses strong knowledge in SAP Sales and Distribution (SD) and foundational level knowledge in SAP ABAP.</p>
+    <p>▪ He has experience in a S/4HANA end-to-end implementation (with Hypercare and PGLS), an AMS and a Rollout project.</p>
+    <p>▪ If you want to navigate back to my personal website 
+      <button onclick="window.open('../index.html', '_blank')" style="background: linear-gradient(180deg, #FAF0C0, #F9E9A3);border: 1px solid;cursor: pointer;">
+        Click Here
+      </button>
+    </p>`,
+
+  skills: `
+    <h2>Skills</h2>
+    <ul style="list-style: square;">
+      <li>SAP Sales & Distribution (S/4 HANA)</li>
+      <li>SAP Module Level Configuration</li>
+      <li>S/4HANA Data Migration Cockpit</li>
+      <li>SAP ABAP</li>
+      <li>Training & Support</li>
+      <li>Microsoft Office Tools</li>
+    </ul>`,
+
+  projects: `
+    <h2>Projects</h2>
+    <h4>Sector Experience</h4>
+    
+    <p>▪ Manufacturing</p>
+    <p>Handled diverse projects in the Manufacturing sector which covers Implementation, AMS, and Rollout.</p>
+    
+    <h4>Professional Experience</h4>
+    <ul style="list-style: square;">
+      <li>Experience in Functional Designing, Requirement Gathering, Business Process Reengineering, Implementation, Testing and Handover.</li>
+      <li>I have also provided both functional and technical support to the business which involves SD and ABAP.</li>
+      <li>Experience in conducting detailed discussions with business users to gather requirements and design effective solutions.</li>
+      <li>Experience in system configuration, functional testing, and facilitating user acceptance testing (UAT) to ensure the solution is clearly understood and accepted by the business users.</li>
+      <li>Collaborated closely with client team during the functional testing (UAT) phase.</li>
+      <li>Experienced in managing Cutover planning and Data Migration activities, ensuring seamless transition from legacy systems to the new environment.</li>
+      <li>Experience in Hypercare support, assisting business users by promptly resolving issues during post-go-live stabilization.</li>
+      <li>Delivered post-go-live support to identify and resolve critical issues that could impact business operations.</li>
+      <li>Kailash is having implementation experience in following SAP Sales & Distribution (SD) areas:</li>
+      
+      <ul>
+        <li>Order Fulfilment, Delivery Processing and Billing</li>  
+        <li>Master Data Management –  BP (Customer) and Pricing Condition Records</li>
+        <li>Order Fulfilment, Delivery Processing and Billing</l
+        <li>Returns & Credit/Debit Memo Handling</li>
+        <li>Pricing Procedure & Conditions Management</li>
+        <li>Revenue Account Determination</li>
+        <li>Partner Determination</li>
+        <li>Output Determination</li>
+      </ul>
+      
+      <li>Also have experience in following SAP ABAP areas:</li>
+      <ul>
+        <li>DDIC – Tables, Structures, Views and Domains</li>
+        <li>Reports (ALV & Classical)</li>
+        <li>Adobe Forms & Smart Forms</li>
+        <li>Implicit Enhancements</li>
+        <li>Business Logic Testing & Debugging</li>
+      </ul>
+    </ul>
+    <br><br>
+    `,
+  certifications: `
+    <h2>Certifications</h2>
+    <p>Data unavailable</p>`,
+};
+
+const mainContent = document.getElementById('mainContent');
+const sidebar = document.getElementById('sidebar');
+const statusBar = document.getElementById('statusBar');
+const welcomeHTML = `
+  <h2>Welcome to My SAP Portfolio</h2>
+    <p>Click on items in the sidebar or use t-codes to navigate to the content.</p>
+    <p style="text-decoration: underline;">List of T-Codes</p>
+    <p>Z001 - Profile</p>
+    <p>Z002 - Skills</p>
+    <p>Z003 - Projects</p>
+    <p>Z004 - Certifications</p>
+`;
+
+/****************************
+ * Open Section Function
+ ****************************/
+function openSection(key){
+  mainContent.innerHTML = sections[key] || '<p>No content available.</p>';
+  statusBar.textContent = `Opened: (${key.charAt(0).toUpperCase() + key.slice(1)})`
+  statusBar.style.backgroundColor = "green"
+  statusBar.style.color = "white"
+  setTimeout(()=>{
+    statusBar.textContent = ""
+    statusBar.style.backgroundColor = ""
+    statusBar.style.color = ""
+  }, 3000)
+}
+
+/****************************
+ * Sidebar Click
+ ****************************/
+document.querySelectorAll('.leaf').forEach(item => {
+  item.addEventListener('click', e => {
+    e.stopPropagation();
+    const key = item.dataset.key;
+    openSection(key);
+  });
+});
+
+/****************************
+ * Menu Actions
+ ****************************/
+function updateVersionInfo() {
+  const currentSize = parseInt(window.getComputedStyle(mainContent).fontSize);
+  document.getElementById('versionInfo').innerHTML = `
+    Portfolio Version: 1.0<br>
+    Font Name: Tahoma<br>
+    Font Size: ${currentSize}px<br>
+    Built using: HTML, CSS, JS`;
+}
+updateVersionInfo();
+
+document.getElementById('downloadResume').addEventListener('click', () => {
+  window.open('#', '_blank');
+});
+
+document.querySelector('button[title="Print"]').addEventListener('click', () => { window.print(); });
+
+document.getElementById('increaseFont').addEventListener('click', () => {
+  let size = parseInt(window.getComputedStyle(mainContent).fontSize);
+  let size2 = parseInt(window.getComputedStyle(sidebar).fontSize);
+  mainContent.style.fontSize = (size + 2) + 'px';
+  sidebar.style.fontSize = (size2 + 2) + 'px';
+  updateVersionInfo();
+});
+
+document.getElementById('decreaseFont').addEventListener('click', () => {
+  let size = parseInt(window.getComputedStyle(mainContent).fontSize);
+  let size2 = parseInt(window.getComputedStyle(sidebar).fontSize);
+  mainContent.style.fontSize = (size - 2) + 'px';
+  sidebar.style.fontSize = (size2 - 2) + 'px';
+  updateVersionInfo();
+});
+
+document.getElementById('resetLayout').addEventListener('click', () => {
+  mainContent.style.fontSize = '14px';
+  sidebar.style.fontSize = '14px';
+  document.body.style.background = '#e0f0ff';
+  statusBar.textContent = 'Ready';
+  updateVersionInfo();
+});
+
+/****************************
+ * T-Code Functionality
+ ****************************/
+document.querySelector('button[title = "Back"]').addEventListener('click', () => {
+  mainContent.innerHTML = welcomeHTML;
+  if (statusBar.textContent != 'Ready') {
+    statusBar.textContent = ``;
+  }
+})
+
+const tcodeInput = document.getElementById('tcodeInput');
+const currentTCode = document.getElementById('currentTCode');
+const executeTcode = document.getElementById('executeTcode');
+
+function runTcode(tcode){
+  switch(tcode){
+    case '' : 
+      statusBar.textContent = 'Enter a valid T-Code'; 
+      statusBar.style.backgroundColor = "red"
+      statusBar.style.color = "white"
+      setTimeout(()=>{
+        statusBar.textContent = ''; 
+        statusBar.style.backgroundColor = ""
+        statusBar.style.color = ""
+      }, 3000); break;
+
+    case 'Z001': openSection('profile'); break;
+    case 'Z002': openSection('skills'); break;
+    case 'Z003': openSection('projects'); break;
+    case 'Z004': openSection('certifications'); break;
+    
+    default: 
+      statusBar.textContent = "T-Code not found.";
+      statusBar.style.backgroundColor = "red"
+      statusBar.style.color = "white";
+      setTimeout(()=>{
+        statusBar.textContent = ''; 
+        statusBar.style.backgroundColor = ""
+        statusBar.style.color = ""
+      }, 3000)
+  }
+}
+
+tcodeInput.addEventListener('keypress', function(e){
+  if(e.key === 'Enter'){
+    runTcode(tcodeInput.value.trim().toUpperCase());
+    tcodeInput.value = '';
+  }
+});
+
+executeTcode.addEventListener('click', () => {
+  runTcode(tcodeInput.value.trim().toUpperCase());
+  tcodeInput.value = '';
+});
+</script>
+
+</body>
+</html>
